@@ -42,7 +42,7 @@
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="stylesheet" href="./static/css/index-sass.css">
-  <link rel="icon" href="./static/images/worldgrow_white.png">
+  <link rel="icon" href="./static/images/favicon.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -84,7 +84,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </span>
             <span class="author-block">
               <a href="https://hustvl.github.io/Snap-Snap/">Jia Lu</a><sup>3</sup>,
-            </span>
+            </span><br/>
             <span class="author-block">
               <a href="https://scholar.google.com/citations?user=JZIKCF0AAAAJ&hl=en">Jiazhong Cen</a><sup>1</sup>,
             </span>
@@ -170,7 +170,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We tackle the challenge of generating the infinitely extendable 3D world &mdash; large, continuous environments with coherent geometry and realistic appearance. Existing methods face key challenges: 2D-lifting approaches suffer from geometric and appearance inconsistencies across views, 3D implicit representations are hard to scale up, and current 3D foundation models are mostly object-centric, limiting their applicability to scene-level generation. Our key insight is leveraging strong generation priors from pre-trained 3D models for structured scene block generation. To this end, we propose <strong>WorldGrow</strong>, a hierarchical framework for unbounded 3D scene synthesis. Our method features three core components: (1) a data curation pipeline that extracts high-quality scene blocks for training, making the 3D structured latent representations suitable for scene generation; (2) a 3D block inpainting mechanism that enables context-aware scene extension; and (3) a coarse-to-fine generation strategy that ensures both global layout plausibility and local geometric/textural fidelity. Evaluated on the large-scale 3D-FRONT dataset, \name achieves SOTA performance in geometry reconstruction, while uniquely supporting infinite scene generation with photorealistic and structurally consistent outputs. These results highlight its capability for constructing large-scale virtual environments and potential for building future world models.
+            We tackle the challenge of generating the infinitely extendable 3D world &mdash; large, continuous environments with coherent geometry and realistic appearance. Existing methods face key challenges: 2D-lifting approaches suffer from geometric and appearance inconsistencies across views, 3D implicit representations are hard to scale up, and current 3D foundation models are mostly object-centric, limiting their applicability to scene-level generation. Our key insight is leveraging strong generation priors from pre-trained 3D models for structured scene block generation. To this end, we propose <strong>WorldGrow</strong>, a hierarchical framework for unbounded 3D scene synthesis. Our method features three core components: (1) a data curation pipeline that extracts high-quality scene blocks for training, making the 3D structured latent representations suitable for scene generation; (2) a 3D block inpainting mechanism that enables context-aware scene extension; and (3) a coarse-to-fine generation strategy that ensures both global layout plausibility and local geometric/textural fidelity. Evaluated on the large-scale 3D-FRONT dataset, WorldGrow achieves SOTA performance in geometry reconstruction, while uniquely supporting infinite scene generation with photorealistic and structurally consistent outputs. These results highlight its capability for constructing large-scale virtual environments and potential for building future world models.
           </p>
         </div>
       </div>
@@ -182,9 +182,66 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="columns is-centered has-text-centered">
       <div class="column is-full">
         <h2 class="title is-3">Gallery</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <video poster="" id="001" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/gallery/5x5/001.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="002" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/gallery/5x5/002.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="003" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/gallery/5x5/003.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="004" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/gallery/5x5/004.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="005" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/gallery/5x5/005.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="006" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/gallery/5x5/006.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="007" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/gallery/5x5/007.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="008" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/gallery/5x5/008.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="009" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/gallery/5x5/009.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="010" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/gallery/5x5/010.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="011" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/gallery/5x5/011.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
         <div class="content has-text-justified">
           <p>
-            Placeholder.
+            Mesh and 3DGS viewers are coming soon!
           </p>
         </div>
       </div>
@@ -214,9 +271,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="columns is-centered has-text-centered">
       <div class="column is-full">
         <h2 class="title is-3">Outdoor Extension</h2>
+        <p style="text-align:center;">
+          <image width="100%" src="static/images/urban.png" class="img-responsive" alt="overview">
+        </p>
         <div class="content has-text-justified">
           <p>
-            Placeholder.
+            We further explore the outdoor scene extension capability of <strong>WorldGrow</strong> by training on city-level data. We are also testing the model on nature scenes. Stay tuned for more results!
           </p>
         </div>
       </div>
