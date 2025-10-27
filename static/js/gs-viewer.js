@@ -1288,12 +1288,12 @@ async function main() {
       document.getElementById("spinner").style.display = "";
       start = Date.now() + 2000;
     }
-    // const progress = (100 * vertexCount) / (splatData.length / rowLength);
-    // if (progress < 100) {
-    //   document.getElementById("progress").style.width = progress + "%";
-    // } else {
-    //   document.getElementById("progress").style.display = "none";
-    // }
+    const progress = (100 * vertexCount) / (splatData.length / rowLength);
+    if (progress < 100) {
+      document.getElementById("progress").style.width = progress + "%";
+    } else {
+      document.getElementById("progress").style.display = "none";
+    }
     lastFrame = now;
     requestAnimationFrame(frame);
   };
