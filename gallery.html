@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KQVHW2H3');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="utf-8">
+  <meta name="description"
+        content="WorldGrow: Generating Infinite 3D World">
+  <meta name="keywords" content="WorldGrow, World Model, Embodied AI, 3D Generation, Infinite 3D World">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WorldGrow: Generating Infinite 3D World</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/index-sass.css">
+  <link rel="icon" href="./static/images/favicon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <!-- <script src="./static/js/compare.js"></script> -->
+  <!-- <script src="./static/js/preload-videos.js"></script> -->
+  <script src="./static/js/gs-viewer.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQVHW2H3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full has-text-centered">
+          <p style="text-align:center;">
+            <image width="60%" src="static/images/wide_white_croped.png" class="img-responsive" alt="logo">
+          </p>
+          <h1 class="title is-1 publication-title">WorldGrow: Generating Infinite 3D World</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=2dCJlg4AAAAJ">Sikuang Li</a><sup>1*</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://chensjtu.github.io/">Chen Yang</a><sup>2*</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://jaminfong.cn/">Jiemin Fang</a><sup>2✉</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://taoranyi.com/">Taoran Yi</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://hustvl.github.io/Snap-Snap/">Jia Lu</a><sup>3</sup>,
+            </span><br/>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=JZIKCF0AAAAJ&hl=en">Jiazhong Cen</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://lingxixie.com/Home.html">Lingxi Xie</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://shenwei1231.github.io/">Wei Shen</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.qitian1987.com/">Qi Tian</a><sup>2✉</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>MoE Key Lab of Artificial Intelligence, School of Computer Science, SJTU</span><br/>
+            <span class="author-block"><sup>2</sup>Huawei Inc.</span>
+            <span class="author-block"><sup>3</sup>Huazhong University of Science and Technology</span>
+          </div>
+
+          <div>
+            <span><sup>*</sup>Equal contribution.</span>  &emsp;  <span><sup>✉</sup>Corresponding authors.</span></br>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="javascript:void(0);"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="javascript:void(0);"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/world-grow/WorldGrow"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full" id="single-comparison">
+        <div class="content has-text-justified">
+          <p>
+            <strong>TL;DR:</strong> We propose <strong>WorldGrow</strong> &mdash; a generative method which creates infinite <strong>EXPLICIT 3D</strong> worlds, an alternative to the extensible, realistic, interactive world simulator.
+          </p>
+        </div>
+        <video poster="" id="teaser" autoplay muted loop playsinline height="100%">
+          <source src="static/videos/teaser.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+</section>
+
+<section class="section grey-bg">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We tackle the challenge of generating the infinitely extendable 3D world &mdash; large, continuous environments with coherent geometry and realistic appearance. Existing methods face key challenges: 2D-lifting approaches suffer from geometric and appearance inconsistencies across views, 3D implicit representations are hard to scale up, and current 3D foundation models are mostly object-centric, limiting their applicability to scene-level generation. Our key insight is leveraging strong generation priors from pre-trained 3D models for structured scene block generation. To this end, we propose <strong>WorldGrow</strong>, a hierarchical framework for unbounded 3D scene synthesis. Our method features three core components: (1) a data curation pipeline that extracts high-quality scene blocks for training, making the 3D structured latent representations suitable for scene generation; (2) a 3D block inpainting mechanism that enables context-aware scene extension; and (3) a coarse-to-fine generation strategy that ensures both global layout plausibility and local geometric/textural fidelity. Evaluated on the large-scale 3D-FRONT dataset, WorldGrow achieves SOTA performance in geometry reconstruction, while uniquely supporting infinite scene generation with photorealistic and structurally consistent outputs. These results highlight its capability for constructing large-scale virtual environments and potential for building future world models.
+          </p>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Gallery</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <video poster="" id="001" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/gallery/5x5/001.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="002" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/gallery/5x5/002.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="003" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/gallery/5x5/003.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="004" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/gallery/5x5/004.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="005" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/gallery/5x5/005.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="006" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/gallery/5x5/006.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="007" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/gallery/5x5/007.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="008" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/gallery/5x5/008.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="009" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/gallery/5x5/009.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="010" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/gallery/5x5/010.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="011" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/gallery/5x5/011.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="is-centered method-buttons">
+          <button class="button method-button is-white is-success is-selected" value="static/models/room_001.ply" onclick="selectModel(this)">room_001</button>
+          <button class="button method-button is-white" value="static/models/room_002.ply" onclick="selectModel(this)">room_002</button>
+          <button class="button method-button is-white" value="static/models/room_003.ply" onclick="selectModel(this)">room_003</button>
+          <button class="button method-button is-white" value="static/models/room_004.ply" onclick="selectModel(this)">room_004</button>
+          <button class="button method-button is-white" value="static/models/room_005.ply" onclick="selectModel(this)">room_005</button>
+          <button class="button method-button is-white" value="static/models/room_006.ply" onclick="selectModel(this)">room_006</button>
+          <br/>
+          <button class="button method-button is-white" value="static/models/room_007.ply" onclick="selectModel(this)">room_007</button>
+          <button class="button method-button is-white" value="static/models/room_008.ply" onclick="selectModel(this)">room_008</button>
+          <button class="button method-button is-white" value="static/models/room_009.ply" onclick="selectModel(this)">room_009</button>
+          <button class="button method-button is-white" value="static/models/room_010.ply" onclick="selectModel(this)">room_010</button>
+          <button class="button method-button is-white" value="static/models/room_011.ply" onclick="selectModel(this)">room_011</button>
+        </div>
+        <div class="scene" id="spinner">
+          <div class="cube-wrapper">
+            <div class="cube">
+              <div class="cube-faces">
+                <div class="cube-face bottom"></div>
+                <div class="cube-face top"></div>
+                <div class="cube-face left"></div>
+                <div class="cube-face right"></div>
+                <div class="cube-face back"></div>
+                <div class="cube-face front"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <canvas id="canvas"></canvas>
+
+        <div class="content has-text-justified">
+          <p>
+            <div class="content has-text-justified">
+              <div class="notification is-warning is-light"
+                  style="margin-top:0.75rem; background-color:#FFFBEA; border:1px solid #F6EAC0;">
+                <p class="mb-2">
+                  <span style="font-size:1.1em;">🏗️</span> <strong>Under construction</strong>: we are adding <span class="tag is-info is-light">Mesh Viewers</span> for <em>interactive</em> exploration (orbit / first-person, multi-view, material toggles).
+                </p>
+                <p class="mt-3">
+                  A playable <span class="tag is-primary is-light">Web Demo / Game</span> (walk-only navigation & planning) is also in the works.
+                  Stay tuned!
+                </p>
+              </div>
+            </div>
+          </p>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="section grey-bg">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Pipeline</h2>
+        <p style="text-align:center;">
+          <image width="100%" src="static/images/pipe.png" class="img-responsive" alt="overview">
+        </p>
+        <div class="content has-text-justified">
+          <p>
+            Our goal is to generate infinite 3D scenes through modular, block-by-block synthesis. We begin by curating high-quality scene blocks and adapting SLAT to better model structured 3D context. A 3D block inpainting module enables spatially coherent extension, while a coarse-to-fine generation strategy ensures global layout plausibility and local detail fidelity. Together, these components allow <strong>WorldGrow</strong> to progressively construct photorealistic and structurally consistent 3D worlds with theoretically unbounded spatial extent.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Outdoor Extension</h2>
+        <!-- <p style="text-align:center;">
+          <image width="100%" src="static/images/urban.png" class="img-responsive" alt="overview">
+        </p> -->
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <video poster="" id="001" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/gallery/5x5/001.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="002" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/gallery/5x5/002.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="003" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/gallery/5x5/003.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="004" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/gallery/5x5/004.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="005" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/gallery/5x5/005.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="006" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/gallery/5x5/006.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="007" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/gallery/5x5/007.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="008" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/gallery/5x5/008.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="009" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/gallery/5x5/009.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="010" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/gallery/5x5/010.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="011" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/gallery/5x5/011.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="section grey-bg" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title has-text-centered">Citation</h2>
+        <pre><code>@article{worldgrow2025,
+  title   = {WorldGrow: Generating Infinite 3D World},
+  author  = {Li, Sikuang and Yang, Chen and Fang, Jiemin and Yi, Taoran and Lu, Jia and Cen, Jiazhong and Xie, Lingxi and Shen, Wei and Tian, Qi},
+  journal = {arXiv preprint arXiv:XXXX.XXXXX},
+  year    = {2025}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="javascript:void(0);">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/world-grow/WorldGrow" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            The website template was borrowed from <a href="https://nerfies.github.io/">Nerfies</a> and <a href="https://dorverbin.github.io/refnerf/">Ref-NeRF</a>. Also thanks to <a href="https://gaussianobject.github.io/">GaussianObject</a>, <a href="https://microsoft.github.io/TRELLIS/">TRELLIS</a> and <a href="https://unilat3d.github.io/">UniLat3D</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

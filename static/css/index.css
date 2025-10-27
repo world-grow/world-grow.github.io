@@ -130,3 +130,11 @@ body {
 .grey-bg {
   background-color: #f5f5f5;
 }
+
+#canvas {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
