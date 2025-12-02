@@ -34,7 +34,7 @@
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/index.js"></script>
-  <script src="./static/js/gs-viewer.js"></script>
+  <script src="./static/js/gs-viewer.js" defer></script>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
@@ -45,27 +45,47 @@
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
+<div class="column has-text-centered">
+  <div class="publication-links">
+    <span class="link-block">
+      <a href="./index.html"
+          class="external-link button is-normal is-rounded is-dark">
+        <span class="icon">
+            <i class="fas fa-arrow-left"></i>
+        </span>
+        <span>Back to Main</span>
+      </a>
+    </span>
+  </div>
+</div>
+
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full">
-        <h2 class="title is-3">Gallery</h2>
+        <h2 class="title is-2">3DGS Gallery</h2>
         <div class="is-centered method-buttons">
-          <button class="button method-button is-white is-success is-selected" value="static/models/room_001.ply" onclick="selectModel(this)">room_001</button>
-          <button class="button method-button is-white" value="static/models/room_002.ply" onclick="selectModel(this)">room_002</button>
-          <button class="button method-button is-white" value="static/models/room_003.ply" onclick="selectModel(this)">room_003</button>
-          <button class="button method-button is-white" value="static/models/room_004.ply" onclick="selectModel(this)">room_004</button>
-          <button class="button method-button is-white" value="static/models/room_005.ply" onclick="selectModel(this)">room_005</button>
-          <button class="button method-button is-white" value="static/models/room_006.ply" onclick="selectModel(this)">room_006</button>
+          <button class="button method-button is-white is-success is-selected" value="3x3/000.splat" onclick="selectModel(this)">3x3_000</button>
+          <button class="button method-button is-white" value="3x3/001.splat" onclick="selectModel(this)">3x3_001</button>
+          <button class="button method-button is-white" value="3x3/002.splat" onclick="selectModel(this)">3x3_002</button>
+          <button class="button method-button is-white" value="3x3/003.splat" onclick="selectModel(this)">3x3_003</button>
+          <button class="button method-button is-white" value="3x3/004.splat" onclick="selectModel(this)">3x3_004</button>
           <br/>
-          <button class="button method-button is-white" value="static/models/room_007.ply" onclick="selectModel(this)">room_007</button>
-          <button class="button method-button is-white" value="static/models/room_008.ply" onclick="selectModel(this)">room_008</button>
-          <button class="button method-button is-white" value="static/models/room_009.ply" onclick="selectModel(this)">room_009</button>
-          <button class="button method-button is-white" value="static/models/room_010.ply" onclick="selectModel(this)">room_010</button>
-          <button class="button method-button is-white" value="static/models/room_011.ply" onclick="selectModel(this)">room_011</button>
+          <button class="button method-button is-white" value="5x5/000.splat" onclick="selectModel(this)">5x5_000</button>
+          <button class="button method-button is-white" value="5x5/001.splat" onclick="selectModel(this)">5x5_001</button>
+          <button class="button method-button is-white" value="5x5/002.splat" onclick="selectModel(this)">5x5_002</button>
+          <button class="button method-button is-white" value="5x5/003.splat" onclick="selectModel(this)">5x5_003</button>
+          <button class="button method-button is-white" value="5x5/004.splat" onclick="selectModel(this)">5x5_004</button>
+          <br/>
+          <button class="button method-button is-white" value="5x5/005.splat" onclick="selectModel(this)">5x5_005</button>
+          <button class="button method-button is-white" value="5x5/006.splat" onclick="selectModel(this)">5x5_006</button>
+          <button class="button method-button is-white" value="5x5/007.splat" onclick="selectModel(this)">5x5_007</button>
+          <button class="button method-button is-white" value="5x5/008.splat" onclick="selectModel(this)">5x5_008</button>
+          <button class="button method-button is-white" value="5x5/009.splat" onclick="selectModel(this)">5x5_009</button>
         </div>
 
-        <div id="progress"></div>
+        <!-- <div id="progress"></div> -->
+    		<!-- <div id="message"></div> -->
         <div class="scene" id="spinner">
           <div class="cube-wrapper">
             <div class="cube">
@@ -81,18 +101,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
         <canvas id="canvas"></canvas>
-
+        <progress class="progress is-success" id="progress" value="0" max="100"></progress>
         <div class="content has-text-justified">
           <p>
             <div class="content has-text-justified">
-              <div class="notification is-warning is-light"
-                  style="margin-top:0.75rem; background-color:#FFFBEA; border:1px solid #F6EAC0;">
+              <div class="notification is-success is-light">
                 <p class="mb-2">
-                  <span style="font-size:1.1em;">🏗️</span> <strong>Under construction</strong>: we are adding <span class="tag is-info is-light">Mesh Viewers</span> for <em>interactive</em> exploration (orbit / first-person, multi-view, material toggles).
+                  <span style="font-size:1.1em;">📦</span>
+                  <strong>Local demo</strong>: please refer to our <a href="https://huggingface.co/UranusITS/worldgrow-results">Hugging Face Dataset</a> to download pre-generated models and run them locally.
                 </p>
                 <p class="mt-3">
-                  A playable <span class="tag is-primary is-light">Web Demo / Game</span> (walk-only navigation & planning) is also in the works.
-                  Stay tuned!
+                  We also provide larger-scale world generation results (9x9) for more expansive scenes.
                 </p>
               </div>
             </div>
